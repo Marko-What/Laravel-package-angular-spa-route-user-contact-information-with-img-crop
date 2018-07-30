@@ -24,7 +24,6 @@
 
 <link rel="stylesheet" type="text/css" href="<?= asset('app/styles.css') ?>" />
 <link rel="stylesheet" type="text/css" href="<?= asset('css/image-crop-styles.css') ?>" />
-
 <link rel="stylesheet" type="text/css" href="<?= asset('css/imguploadStyle.css') ?>" />
 
 
@@ -38,31 +37,10 @@
 
 
 
-  <!--
-	  <script src="<?= asset('js/angular.min.js') ?>"></script>
-    <script src="<?= asset('app/ValidationDirective.js') ?>"></script>
- <script src="<?= asset('app/ui-bootstrap-tpls-2.5.0.js') ?>"></script>
-<link rel="stylesheet" type="text/css" href="<?= asset('app/css/app.css') ?>" />
-     <script src="<?= asset('app/controllers/efController.js') ?>"></script>
-    <script src="<?= asset('app/controllers/efDirective.js') ?>"></script>
-   <script src="<?= asset('app/EmployeeForm/efDirective.js') ?>"></script>
- -->
-
-
-	    <script src="<?= asset('app/DataService.js') ?>"></script>
-	
-
-
-	  <script src="<?= asset('app/image-crop.js') ?>"></script>
-
-
-
-     <script src="<?= asset('app/EmployeeForm/efController.js') ?>"></script>
- 
-
-
-
-	 <script src="<?= asset('app/EmployeeForm/efControlleredit.js') ?>"></script>
+<script src="<?= asset('app/DataService.js') ?>"></script>
+<script src="<?= asset('app/image-crop.js') ?>"></script>
+<script src="<?= asset('app/EmployeeForm/efController.js') ?>"></script>
+<script src="<?= asset('app/EmployeeForm/efControlleredit.js') ?>"></script>
 
 
 	
@@ -70,10 +48,6 @@
 </head>
 
 <body class="container">
-<!--
-<employee-Form/>
-	</div>
-	 -->
 
  <div ng-view></div>
 </body>
