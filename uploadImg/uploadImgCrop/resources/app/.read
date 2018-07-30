@@ -1,0 +1,11 @@
+app needs to exist inside a laravel public folder so that files could be reference by laravel  view index page. Single route.
+By my examination laravel function asset 
+
+	declearing a reference to a folder outside a public folder.
+
+	Could be done just by using linux commands to link, associate files/folder by either cause of easier to implement ... 
+	to paste a folder inside a public laravel folder
+
+
+	
+	

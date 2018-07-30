@@ -1,0 +1,12 @@
+
+/*contat stylesheets later ----- later place it inside a packages styles file*/
+
+.classOne{
+	height:0%!important;	
+}
+
+.classTwo {
+	height:100%!important;	
+}
+
+.body{ background-color:red!important;}

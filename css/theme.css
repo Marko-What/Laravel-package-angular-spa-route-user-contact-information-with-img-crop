@@ -1,0 +1,246 @@
+.box {
+	/*border:1px solid red;*/
+	position: relative;
+	height: 25%;
+	box-sizing: border-box;
+	/*padding: 10px;*/
+	overflow:hidden;
+	/*background-color:#aaa;*/
+	/*margin: 5px;*/
+	padding-right: 0px!important;
+	padding-left: 0px!important;
+	margin:4px;	
+}
+
+
+.col-sm-3 {
+    width: 22%!important;
+}
+
+.col-sm-6 {
+   width: 45%!important;
+}
+.col-6 {
+   width: 100%!important;
+}
+
+.col-sm-12 {
+    width: 96%!important;
+}
+
+
+
+.col-xs-12 {
+   /* width: 100%!important;*/
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	  .col-xs-12 {
+	    width: 100%!important;
+	}
+
+}
+
+
+
+
+
+
+
+
+.box img {
+	width: 100%;
+	height:auto;
+	/*max-height: 100%;*/
+	padding:0px!important;
+	bottom: 0px;	
+	position: absolute;
+}
+
+
+.predloga img {
+	width:100%;
+}
+
+.title {
+	opacity:0.7;
+	background-color:black;
+	border-top:3px solid red;
+	color:white;
+	
+	font-size:13px;
+	height:17%;
+	bottom:0px;
+	position: absolute;
+	width:100%;
+	padding: 5px;
+	font-family: sans-serif;
+}
+.title h4 {
+	font-weight: 600;
+	margin-top: 0px;
+}
+
+.modal-body{
+	display:none;
+}
+
+
+.predloga{
+	width:  16% !important;
+	overflow: hidden;
+	padding: 20px;
+	height: 120px;
+	margin: 5px;
+}
+
+.border {
+	border: 3px solid red;
+	border-radius: 10px;
+}
+
+
+.customSize {
+	width:92%!important;
+}
+
+
+.vertical {
+	height: 51%;
+	/*background-color: rebeccapurple;*/
+	/*margin: 5px!important;*/	
+	padding-right: 5px!important;
+	padding-left: 0px!important;
+}
+
+.boxvertical {
+	height:100%;	
+	width:100%;
+}
+
+.vertical img {
+	width: 100%;
+	height:auto;
+}
+
+.verticalImg img{
+	width: auto!important;
+	height: 100%!important;
+}
+
+
+@media screen and (max-width: 768px) {
+	
+	    .boxvertical {
+			height: 85%!important;
+			width: 85%!important;
+			margin: 23px;
+		}
+
+	.vertical {
+    		height: 35% !important;
+
+	}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+	.predloga {
+	    width: 36%!important;
+	    overflow: hidden;
+	    padding: 20px;
+	    height: 65px;
+	    margin: -4px;
+	}
+
+	.title {
+     	   height: 20%;	
+	}
+
+	.col-xs-12 {
+	    width: 95%!important;
+	}
+
+
+	.row {
+	    margin: 0 auto!important;
+	
+	/**/
+	margin-left: -28px;
+	}
+
+	.border{
+		height: 60px!important;
+	}
+	
+	.verticalImg img{
+	width: 100%!important;
+	height:auto!important;
+	}
+
+	.predloga img {
+	    width: 75%;
+	    height: auto;
+	    position: absolute;
+	}
+
+	.mobile {
+		/*background-color: red !important;*/
+		width: 95% !important;
+	}
+	
+	button#saveit {
+	    margin: 0px;
+	    position: absolute;
+	    top: 170px;
+	    right: 30px;
+	    width: 75px;
+	    height: 25px;
+	    font-size: 9;
+	}
+
+}
+
+
+
+
+div#line{
+	width:12px;
+	height:3px;
+	box-shadow:0px 0px 5px solid red;
+	background-color:red;
+	-webkit-transition: margin 2s; /* Safari */
+         transition: margin 2s;
+}	
+
+
+.marginalno {
+	margin-left:95%!important;
+}
+
+
+div#selectMrezek {
+	font-size: 25px;
+	font-weight: 600;
+	color:#e04f00;
+}
+button#saveit {
+
+	margin: 0px;
+	position: absolute;
+	top: 170px;
+	right: 30px;
+}
+
+
+.marginLeft{
+	margin-left:-30px!important;
+}

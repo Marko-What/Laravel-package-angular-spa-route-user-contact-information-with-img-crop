@@ -1,0 +1,68 @@
+
+<div class="container">
+    <div class="row">
+       
+
+
+ <div class="form-group">
+
+
+
+
+<div class="col-sm-12">
+
+      
+		<div ng-show="imageCropStep == 1">		
+			<br/>
+			<input type="file" name="fileInput" id="fileInput" onchange="angular.element(this).scope().fileChanged(event)"/>
+		</div>			
+	  
+	   <div ng-show="imageCropStep == 2">
+		  
+		   
+		   <image-crop			 
+			 data-height="200"
+			 data-width="150"
+			 data-shape="square"
+			 data-step="imageCropStep"
+			 src="imgSrc"
+			 data-result="result"
+			 data-result-blob="resultBlob"
+			 crop="initCrop"
+			 padding="250"
+			 max-size="1024"
+		   ></image-crop>		   
+	   </div>
+       	   
+	   <div ng-show="imageCropStep == 2">
+		   <br/>
+		   <button ng-click="clear()">Cancel</button>
+		   <button ng-click="initCrop = true" id="cropping">Crop</button>		
+	   </div>		  
+	   
+		imgName	:
+		<input type="text" name="imgName" id="imgName" ng-model="imgName" />
+
+
+
+	   <div ng-show="imageCropStep == 3">
+	   
+
+	 <img ng-src="{{result}}"></img>
+       <!--  <p>The Base64 String used in the image above:</p>         
+         <textarea class="result-datauri">{{ result }}</textarea>-->
+		 <button ng-click="clear()">Clear</button>	
+       
+	  </div>
+	   
+     </div>
+
+
+
+	  <button ng-click="upload()">upload</button>
+
+</div><!--end of form-group -->
+
+
+
+

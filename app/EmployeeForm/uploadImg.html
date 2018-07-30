@@ -1,0 +1,271 @@
+<div class="modal modalEscape modalPunch" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">User data In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <!-- <span aria-hidden="true">&times;</span> -->
+        </button>
+      </div>
+      <div class="modal-body">
+       
+
+	      <div class="container col-sm-12">
+	
+
+		<div class="col-sm-6 imgIndex">
+			<img class="curImg" src="{{userimageaa}}"></img>
+		</div>
+		<div class="col-sm-4">
+
+			<span class="col-sm-12">{{firstaa}}</span><!-- end of row --><br />
+			<span class="col-sm-12">{{lastaa}}</span><!-- end of row --><br />
+			<span class="col-sm-12">{{emailaa}}</span><!-- end of row --><br />
+
+		</div>
+		
+		
+		<span class="col-sm-12">{{notesaa}}</span><!-- end of row --><br />
+	      </div>
+
+
+   </div>
+
+
+      <div class="modal-footer"> 
+        <button type="button" class="btn btn-primary" ng-click="edit()">Edit changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="close()">Close</button>
+      </div>
+
+
+ 
+	  
+  </div>
+
+ </div>
+	
+
+</div>
+
+
+<div class="opacity opacityBack"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+       
+
+
+
+<form name="employeeForm" novalidate role="form" id="employeeForm"  #myForm="ngForm">
+
+
+
+
+
+<div class="form-group">
+	
+
+    <label for="fullName" class="col-6 col-sm-12 control-label textAlignRight">First Name:</label>
+	<div class="col-sm-4 rotate">
+    		<input type="text" class="form-control formWidth" id="fullName" name="first" ng-model="form.first"  ng-minlength="3" ng-maxlength="16" ng-required="true" ng-pattern="/^[A-Z]+/" ng-class="{borderOne:employeeForm.first.$error.required && employeeForm.first.$dirty, borderTwo:employeeForm.first.$error.minlength && employeeForm.first.$dirty, borderThree:employeeForm.first.$error.pattern, borderFour:employeeForm.first.$error.maxlength && employeeForm.first.$dirty}" autocomplete="off"/>
+
+			
+		<span class="help-block" ng-if="employeeForm.first.$error.pattern" style="color:red;">First letter uppercase</span>
+
+		
+		<span class="help-block" ng-if="employeeForm.first.$error.required && employeeForm.first.$dirty" style="color:red;">Full name is required</span>
+		<span class="help-block" ng-if="employeeForm.first.$error.minlength && employeeForm.first.$dirty" style="color:orange;" >name charaters too short</span>
+			<span class="help-block" ng-if="employeeForm.first.$error.maxlength && employeeForm.first.$dirty" style="color:#ffea00;">name charaters too long </span>
+		
+
+
+							
+	</div>
+  </div>  <!--end of form-group -->
+
+
+
+
+
+<div class="form-group">
+    <label for="fullName" class="col-sm-12 control-label textAlignRight">Last Name:</label>
+	<div class="col-sm-4 rotate">
+    		<input type="text" class="form-control formWidth" id="fullName" name="last" ng-model="form.last"  ng-minlength="3" ng-maxlength="16" ng-required="true" ng-pattern="/^[A-Z]+/"  ng-class="{borderOne:employeeForm.last.$error.required && employeeForm.last.$dirty, borderTwo:employeeForm.last.$error.minlength && employeeForm.last.$dirty, borderThree:employeeForm.last.$error.pattern, borderFour:employeeForm.last.$error.maxlength && employeeForm.last.$dirty}" autocomplete="off"/>
+
+
+		<span class="help-block" ng-if="employeeForm.last.$error.required && employeeForm.last.$dirty" style="color:red;">Last name is required</span>
+		<span class="help-block" ng-if="employeeForm.last.$error.pattern" style="color:red;">Last letter uppercase</span>
+		<span class="help-block" ng-if="employeeForm.last.$error.minlength && employeeForm.last.$dirty" style="color:orange;">Last name charaters too long or to short</span>
+		<span class="help-block" ng-if="employeeForm.last.$error.maxlength && employeeForm.last.$dirty" style="color:#ffea00;">name charaters too long or to short</span>					
+						
+
+	</div>
+  </div>  <!--end of form-group -->
+
+
+
+
+
+
+
+<div class="form-group">
+    <label for="email" class="col-sm-12 control-label textAlignRight">Email:</label>
+	<div class="col-sm-4 rotate">
+    		<input type="email" class="form-control formWidth" id="email" name="email" ng-model="form.email" ng-required="true"  ng-class="{borderOne: !employeeForm.email.$valid && employeeForm.email.$dirty, borderTwo: employeeForm.email.$error.minlength && employeeForm.email.$dirty}" autocomplete="off" ng-minlength="5" ng-maxlength="16" />
+		<span class="help-block" ng-if="!employeeForm.email.$valid && employeeForm.email.$dirty" style="color:red;">valid email is required</span>
+
+		
+	</div>
+  </div>  <!--end of form-group -->
+
+
+<div class="col-sm-12">	
+<br />	
+</div><!--end of col-sm-12 -->
+
+
+<div class="form-group">
+	<label for="About" class="col-sm-12 control-label rotate">About you: <input type="checkbox" ng-model="form.about" /></label>
+	<div class="checkbox col-sm-12" ng-click="aboutClick()">	
+			
+	</div><!--end of checkbox -->	
+	
+
+	<div class="col-sm-12">	
+	<textarea  id="notes" name="notes"  class="col-sm-4 uploadText" ng-class="{classOne:form.about, borderOne: employeeForm.notes.$error.required && employeeForm.notes.$dirty, borderTwo: employeeForm.notes.$error.minlength && employeeForm.notes.$dirty, borderThree: employeeForm.notes.$error.maxlength && employeeForm.notes.$dirty, borderFine: !employeeForm.notes.$error && employeeForm.notes.$dirty}" rows="5"  ng-model="form.notes" id="notes" autocomplete="off" ng-minlength="5" ng-maxlength="250" required="true" ></textarea>
+	</div><!--end of div class="col-sm-12" -->
+	
+
+<div class="col-sm-12">	
+	<span class="help-block col-sm-4" ng-if="employeeForm.notes.$error.required && employeeForm.notes.$dirty" style="color:red;">about could not be empty</span>
+
+
+
+	<span class="help-block" ng-if="employeeForm.notes.$error.minlength && employeeForm.notes.$dirty" style="color:orange;">name charaters  or too short</span>	
+
+		<span class="help-block" ng-if="employeeForm.notes.$error.maxlength && employeeForm.notes.$dirty" style="color::#ffea00;">name charaters too long</span>
+
+
+	</div><!--end of div class="col-sm-12" -->
+
+
+
+</div><!--end of form-group -->
+
+
+
+
+<div class="col-sm-4">	
+<br />	
+</div><!--end of col-sm-4 -->
+
+
+
+
+ <div class="form-group">
+	<label for="imgupload" class="col-6 col-sm-12 control-label rotateuploadPicutrelabel">Upload picture:</label>
+	
+	
+
+
+
+
+<div class="col-6 col-sm-12 roatateUpload">
+
+      
+		<div ng-show="imageCropStep == 1">		
+			<br/>
+			<input type="file" name="fileInput" id="fileInput" onchange="angular.element(this).scope().fileChanged(event)" class="col-sm-12"/>
+		</div>			
+	  
+	   <div ng-show="imageCropStep == 2">
+		  
+		   
+		   <image-crop			 
+			 data-height="200"
+			 data-width="150"
+			 data-shape="square"
+			 data-step="imageCropStep"
+			 src="imgSrc"
+			 data-result="result"
+			 data-result-blob="resultBlob"
+			 crop="initCrop"
+			 padding="250"
+			 max-size="1024"
+		   ></image-crop>		   
+	   </div>
+       	   
+	   <div ng-show="imageCropStep == 2">
+		   <br/>
+		   <button ng-click="clear()">Cancel</button>
+		   <button ng-click="initCrop = true" id="cropping">Crop</button>		
+	   </div>		  
+	   
+
+
+
+
+
+
+
+
+
+
+
+
+
+	   <div ng-show="imageCropStep == 3">
+	   
+
+	 <img ng-src="{{result}}" id="imgDiv"></img>
+       <!--  <p>The Base64 String used in the image above:</p>         
+         <textarea class="result-datauri">{{ result }}</textarea>-->
+
+		<div class="col-sm-12">
+		 <button ng-click="clear()">Clear</button>
+		  <button ng-click="upload()" ng-disabled="!employeeForm.$valid">upload</button>
+	     </div>
+    
+
+	  </div>
+	   
+     </div>
+
+
+
+   <div class="col-sm-12">
+		<br />
+    </div>
+
+
+
+	   
+</div><!--end of form-group -->
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
