@@ -28,11 +28,6 @@ angularFormsApp.config(function($routeProvider, $locationProvider){
 		controller:"efControlleredit"	
 	})
 
-	.when("/showUser",{ 
-		templateUrl:"/app/EmployeeForm/showUser.html",
-		controller:"efControllershow"	
-	})
-
 	.otherwise({
 		redirectTo:"/uploadImg"
 	});
