@@ -5,7 +5,6 @@ var angularFormsApp = angular.module('angularFormsApp', ["ngRoute", "ImageCroppe
 
 
 var base_url = window.location.origin;
-var host = window.location.host;
 
  // define our canstant for the API
   angularFormsApp.constant('BASE_URL', base_url);
