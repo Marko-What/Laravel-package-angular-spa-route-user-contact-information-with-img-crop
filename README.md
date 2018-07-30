@@ -39,7 +39,7 @@ Interacting with the data would be as using data model to interact with new tabl
 
 inside config folder run app.php in some text editor and past the following line
 
-	/config/app.php
+	config/app.php
 
 
  Package Service Providers...
@@ -51,14 +51,11 @@ inside config folder run app.php in some text editor and past the following line
 
 
 
-4. in terminal run the command
+4. in terminal run the following commands in order
 
-	composer dump-autoload -o 
+	- composer dump-autoload -o 
+	- php artisan vendor:publish --force
+	- php artisan migrate
 
-
-5. 	php artisan vendor:publish --force
-
-	php artisan migrate
-
- 6.route
+ 5. route to a resource
 	/uploadImgCrop
