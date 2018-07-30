@@ -1,4 +1,4 @@
-laravel-package --> angular spa - user-contact-information-with-user-img-crop
+<b>Laravel-package --> angular spa - user-contact-information-with-user-img-crop</b>
 
 
 As a propective could be useful to wrap the existing functionality into a laravel package which could be implemented into multiple laravel projects which needs angular forms spa application on frontend. The functionality passing the data interacting with the front end will exist inside  single route reference by a plugin prefix route so that does not mess with the existing application code structure and is easy to implement.
@@ -7,7 +7,7 @@ As a propective could be useful to wrap the existing functionality into a larave
 Interacting with the data would be as using data model to interact with new tables created by laravel package database migration definitions.
 
 
-installation 
+<b>installation </b>
 
 1. paste the 'uploadImg/uploadImgCrop' folder inside the laravel packages folder.
 
@@ -42,7 +42,7 @@ inside config folder run app.php in some text editor and past the following line
 	/config/app.php
 
 
- * Package Service Providers...
+ Package Service Providers...
          */
         \uploadImgCrop\UploadImgCropServiceProvider::class,
 
@@ -58,8 +58,7 @@ inside config folder run app.php in some text editor and past the following line
 
 5. 	php artisan vendor:publish --force
 
-
 	php artisan migrate
 
-6.route
+ 6.route
 	/uploadImgCrop
